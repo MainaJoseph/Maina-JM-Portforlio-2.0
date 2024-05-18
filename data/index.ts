@@ -191,6 +191,18 @@ export const companies = [
     img: "/dock.svg",
     nameImg: "/dockerName.svg",
   },
+  {
+    id: 6,
+    name: "Github.",
+    img: "/gitty.svg",
+    nameImg: "/Github.svg",
+  },
+  {
+    id: 7,
+    name: "NextJS.",
+    img: "nextty.png",
+    nameImg: "/nextjs.png",
+  },
 ];
 
 export const workExperience = [
