@@ -2,6 +2,7 @@ import { FaLocationArrow } from "react-icons/fa6";
 
 import { socialMedia } from "@/data";
 import MagicButton from "./MagicButton";
+import { Highlight } from "./ui/hero-highlight";
 
 const Footer = () => {
   return (
@@ -21,8 +22,10 @@ const Footer = () => {
           Game to New Heights?
         </h1>
         <p className="text-white-200 md:mt-10 my-5 text-center">
-          Reach out to me today and let&apos;s discuss how I can help you
-          achieve your goals.
+          Reach out to me today and let&apos;s{" "}
+          <Highlight className="text-black dark:text-white">
+            discuss how I can help you achieve your goals.
+          </Highlight>
         </p>
         <a href="mailto:mainajm254@gmail.com">
           <MagicButton
