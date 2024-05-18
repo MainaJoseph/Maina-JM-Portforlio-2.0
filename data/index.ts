@@ -86,7 +86,7 @@ export const projects = [
     des: "Crafting Ideas into Reality, One Innovation at a Time",
     img: "/port.svg",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
-    link: "/mainajm254.vercel.app/",
+    link: "https://mainajm254.vercel.app/",
   },
   {
     id: 3,
@@ -102,7 +102,7 @@ export const projects = [
     des: "A Spotify clone built using Next.js 13.4, TypeScript, Supabase, Stripe, React, and Tailwind CSS.",
     img: "/spotify.png",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
-    link: "/ui.apple.com",
+    link: "https://spotify-clone-delta-azure.vercel.app/",
   },
   {
     id: 5,
@@ -110,7 +110,7 @@ export const projects = [
     des: "This Conference brings together delegates comprising officials from national and county governments, representatives of national authorities from the regional blocs, regional think tanks, as well as development partners, civil society and special interest groups.",
     img: "/kip.png",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
-    link: "/https://kippra-conference.vercel.app/",
+    link: "https://kippra-conference.vercel.app/",
   },
   {
     id: 6,
