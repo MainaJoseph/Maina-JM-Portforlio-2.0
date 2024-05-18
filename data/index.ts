@@ -91,18 +91,34 @@ export const projects = [
   {
     id: 3,
     title: "WallMart Clone",
-    des: "A REAL Software-as-a-Service app with AI features and a payments and credits system using the latest tech stack.",
+    des: "Walmart Clone with NEXT.JS 14! (Intercepting & Parallel Routes, Oxylabs, Shadcn, Zustand",
     img: "/wally.svg",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
     link: "https://wally-iota.vercel.app/",
   },
   {
     id: 4,
-    title: "Animated Apple Iphone 3D Website",
-    des: "Recreated the Apple iPhone 15 Pro website, combining GSAP animations and Three.js 3D effects..",
-    img: "/p4.svg",
+    title: "Spotify Clone",
+    des: "A Spotify clone built using Next.js 13.4, TypeScript, Supabase, Stripe, React, and Tailwind CSS.",
+    img: "/spotify.png",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
     link: "/ui.apple.com",
+  },
+  {
+    id: 5,
+    title: "Kippra Annual Conference",
+    des: "This Conference brings together delegates comprising officials from national and county governments, representatives of national authorities from the regional blocs, regional think tanks, as well as development partners, civil society and special interest groups.",
+    img: "/kip.png",
+    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
+    link: "/https://kippra-conference.vercel.app/",
+  },
+  {
+    id: 6,
+    title: "Stack Airbnb Clone",
+    des: "Welcome to the Full Stack Airbnb Clone project! This application is built using cutting-edge technologies, providing a seamless experience for users. Below, you'll find an overview of the technologies used and instructions on how to set up the project",
+    img: "/air.png",
+    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
+    link: "https://github.com/MainaJoseph/airbnb-clone",
   },
 ];
 
