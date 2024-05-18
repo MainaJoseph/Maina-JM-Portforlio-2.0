@@ -125,33 +125,33 @@ export const projects = [
 export const testimonials = [
   {
     quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+      "Working with Maina was an absolute pleasure. His professionalism, punctuality, and commitment to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every aspect of development truly stands out. If you're looking to enhance your website and elevate your brand, Adrian is the ideal partner.",
+    name: "Muthoni Lucy",
+    title: "Director of Alpha Tech",
   },
   {
     quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+      "Teaming up with Maina was a fantastic decision. His professionalism, creativity, and dedication to achieving outstanding results were evident throughout our collaboration. Maina's enthusiasm and expertise in her field are unmatched. If you're seeking someone who can bring fresh ideas and deliver exceptional outcomes, Lisa is the ideal partner.",
+    name: "Michael Lusanga",
+    title: "Chair Love & Hope",
   },
   {
     quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+      "Partnering with Maina was a wonderful experience. His expertise, dependability, and drive for excellence were evident from start to finish. Adrian's enthusiasm for every development phase is truly impressive. If you seek to elevate your website and enhance your brand, Adrian is the partner you need",
+    name: "Macharia",
+    title: "Data Engineer ONA",
   },
   {
     quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+      "Collaborating with Maina was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. His enthusiasm for every facet of development truly stands out. If you're looking to elevate your website and enhance your brand, Maina is the ideal partner.",
+    name: "Juma Albert",
+    title: "CEO NovaTech Technologies",
   },
   {
     quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+      "Working with Maina was a true pleasure. His expertise, punctuality, and commitment to outstanding results were apparent at every stage of our project. Adrian's enthusiasm for all aspects of development is exceptional. If you want to enhance your website and elevate your brand, Adrian is the ideal collaborator",
+    name: "Francis Kosgei",
+    title: "Senior Software Dev Upstream Tech",
   },
 ];
 
