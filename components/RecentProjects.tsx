@@ -5,6 +5,8 @@ import { projects } from "@/data";
 import { PinContainer } from "./ui/Pin";
 import { LampContainer } from "./ui/Lamp";
 import Link from "next/link";
+import { HoverBorderGradient } from "./ui/HoverBorder";
+// Import the HoverBorderGradient component
 
 const RecentProjects = () => {
   return (
@@ -24,7 +26,9 @@ const RecentProjects = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <div className="lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw]">
+            <HoverBorderGradient // Wrap PinContainer with HoverBorderGradient
+              containerClassName="lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw]"
+            >
               <PinContainer
                 title={item.link}
                 href="https://twitter.com/mannupaaji"
@@ -80,7 +84,7 @@ const RecentProjects = () => {
                   </div>
                 </div>
               </PinContainer>
-            </div>
+            </HoverBorderGradient>
           </Link>
         ))}
       </div>
