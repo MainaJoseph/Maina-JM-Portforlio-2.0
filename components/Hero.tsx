@@ -4,10 +4,8 @@ import MagicButton from "./MagicButton";
 import { Spotlight } from "./ui/Spotlight";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 import Image from "next/image";
-import { FlipWords } from "./ui/flip-words";
 
 const Hero = () => {
-  const words = ["Developer", "Web Designer", "IT Consultant"];
   return (
     <div className="pb-20 pt-36">
       {/**
@@ -60,8 +58,7 @@ const Hero = () => {
           />
 
           <p className="flex flex-row items-center text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
-            Hi! I&apos;m Joseph Maina, <FlipWords words={words} /> based in
-            Kenya 🇰🇪.
+            Hi! I&apos;m Joseph Maina, a Developer based in Kenya 🇰🇪.
             <Image
               src="/Kenya.png"
               alt="Kenya"
