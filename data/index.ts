@@ -125,7 +125,7 @@ export const projects = [
 export const testimonials = [
   {
     quote:
-      "Working with Maina was an absolute pleasure. His professionalism, punctuality, and commitment to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every aspect of development truly stands out. If you're looking to enhance your website and elevate your brand, Adrian is the ideal partner.",
+      "Working with Maina was an absolute pleasure. His professionalism, punctuality, and commitment to delivering exceptional results were evident throughout our project. Maina's enthusiasm for every aspect of development truly stands out. If you're looking to enhance your website and elevate your brand, Maina is the ideal partner.",
     name: "Muthoni Lucy",
     title: "Director of Alpha Tech",
     imgSrc: "/muthoni.png",
@@ -139,7 +139,7 @@ export const testimonials = [
   },
   {
     quote:
-      "Partnering with Maina was a wonderful experience. His expertise, dependability, and drive for excellence were evident from start to finish. Adrian's enthusiasm for every development phase is truly impressive. If you seek to elevate your website and enhance your brand, Adrian is the partner you need",
+      "Partnering with Maina was a wonderful experience. His expertise, dependability, and drive for excellence were evident from start to finish. Maina's enthusiasm for every development phase is truly impressive. If you seek to elevate your website and enhance your brand, Maina is the partner you need",
     name: "Macharia",
     title: "Data Engineer ONA",
     imgSrc: "/mash.jpeg",
@@ -153,7 +153,7 @@ export const testimonials = [
   },
   {
     quote:
-      "Working with Maina was a true pleasure. His expertise, punctuality, and commitment to outstanding results were apparent at every stage of our project. Adrian's enthusiasm for all aspects of development is exceptional. If you want to enhance your website and elevate your brand, Adrian is the ideal collaborator",
+      "Working with Maina was a true pleasure. His expertise, punctuality, and commitment to outstanding results were apparent at every stage of our project. Maina's enthusiasm for all aspects of development is exceptional. If you want to enhance your website and elevate your brand, Maina is the ideal collaborator",
     name: "Francis Kosgei",
     title: "Senior Software Dev Upstream Tech",
     imgSrc: "/kosgei.jpeg",
