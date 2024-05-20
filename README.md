@@ -1,10 +1,5 @@
-<div align="center">
-  <br />
-   ![maina](https://github.com/MainaJoseph/Maina-JM-Portforlio-2.0/assets/75726095/cf2777fb-5670-4269-bd19-b7d18d9394ff)
+![maina](https://github.com/MainaJoseph/Maina-JM-Portforlio-2.0/assets/75726095/3e906004-495b-422d-9214-02d79be9020a)
 
-  <br />
-  <h3 align="center">My Portfolio 2.0</h3>
-</div>
 
 ## 📋 <a name="table">Table of Contents</a>
 
