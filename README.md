@@ -1,4 +1,4 @@
-  <h3 align="center">A Modern Next.js Portfolio</h3>
+  <h3 align="center">My Portfolio 2.0</h3>
 </div>
 
 ## 📋 <a name="table">Table of Contents</a>
