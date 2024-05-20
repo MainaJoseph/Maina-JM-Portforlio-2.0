@@ -1,9 +1,7 @@
 <div align="center">
   <br />
-    <a href="https://youtu.be/FTH6Dn3AyIQ" target="_blank">
-      ![maina](https://github.com/MainaJoseph/Maina-JM-Portforlio-2.0/assets/75726095/431bb0f2-dd35-4c89-b834-2ef298af3431)
+   ![maina](https://github.com/MainaJoseph/Maina-JM-Portforlio-2.0/assets/75726095/cf2777fb-5670-4269-bd19-b7d18d9394ff)
 
-    </a>
   <br />
   <h3 align="center">My Portfolio 2.0</h3>
 </div>
