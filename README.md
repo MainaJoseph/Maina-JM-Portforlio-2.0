@@ -1,3 +1,10 @@
+<div align="center">
+  <br />
+    <a href="https://youtu.be/FTH6Dn3AyIQ" target="_blank">
+      ![maina](https://github.com/MainaJoseph/Maina-JM-Portforlio-2.0/assets/75726095/431bb0f2-dd35-4c89-b834-2ef298af3431)
+
+    </a>
+  <br />
   <h3 align="center">My Portfolio 2.0</h3>
 </div>
 
