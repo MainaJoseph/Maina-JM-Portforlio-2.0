@@ -1,6 +1,5 @@
 ![maina](https://github.com/MainaJoseph/Maina-JM-Portforlio-2.0/assets/75726095/3e906004-495b-422d-9214-02d79be9020a)
 
-
 ## 📋 <a name="table">Table of Contents</a>
 
 1. 🤖 [Introduction](#introduction)
@@ -8,8 +7,7 @@
 3. 🔋 [Features](#features)
 4. 🤸 [Quick Start](#quick-start)
 5. 🕸️ [Code to Copy](#snippets)
-6. 🔗 [Assets](#links)
-7. 🚀 [More](#more)
+6. 🚀 [More](#more)
 
 ## 🚨 Tutorial
 
