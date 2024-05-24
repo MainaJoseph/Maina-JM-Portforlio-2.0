@@ -1,6 +1,7 @@
 import React from "react";
 import { MacbookScroll } from "@/components/ui/macbook-scroll";
 import Link from "next/link";
+import Image from "next/image";
 
 export function Top() {
   return (
@@ -25,7 +26,13 @@ export function Top() {
 }
 // Peerlist logo
 const Badge = ({ className }: { className?: string }) => {
-  return <div>Hello</div>;
+  return (
+    <div className="flex flex-row gap-2">
+      <Image src="/git.svg" alt="logo" width={20} height={20} />
+      <Image src="/next.svg" alt="logo" width={20} height={20} />
+      <span className="text-sm font-semibold">JM</span>
+    </div>
+  );
 };
 
 export default Top;
