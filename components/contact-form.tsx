@@ -1,11 +1,18 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent } from "@/components/ui/card";
-import { Send, CheckCircle, AlertCircle, Mail, Shield } from "lucide-react";
+import {
+  Send,
+  CheckCircle,
+  AlertCircle,
+  Mail,
+  Shield,
+  Loader2,
+} from "lucide-react";
 import {
   sendContactEmail,
   sendOTPEmail,
@@ -37,6 +44,41 @@ export default function ContactForm() {
     type: null,
     message: "",
   });
+  const [isVerifying, setIsVerifying] = useState(false);
+
+  // Auto-verify OTP when 5 digits are entered
+  useEffect(() => {
+    const verifyOTPAsync = async () => {
+      if (otp.length === 5 && showOTP && !emailVerified && !isVerifying) {
+        setIsVerifying(true);
+        setStatus({ type: null, message: "" });
+
+        const verifyResult = await verifyOTP(formData.email, otp);
+
+        if (verifyResult.success) {
+          setEmailVerified(true);
+          setShowOTP(false);
+          setStatus({
+            type: "success",
+            message: "Email verified successfully!",
+          });
+        } else {
+          setStatus({
+            type: "error",
+            message: verifyResult.error || "Invalid verification code",
+          });
+          // Clear OTP after a short delay so user can see the error
+          setTimeout(() => {
+            setOtp("");
+          }, 1500);
+        }
+
+        setIsVerifying(false);
+      }
+    };
+
+    verifyOTPAsync();
+  }, [otp, showOTP, emailVerified, isVerifying, formData.email]);
 
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -63,6 +105,7 @@ export default function ContactForm() {
 
     setIsSubmitting(true);
     setStatus({ type: null, message: "" });
+    setOtp(""); // Clear any previous OTP
 
     const result = await sendOTPEmail(formData.email, formData.name);
 
@@ -83,15 +126,11 @@ export default function ContactForm() {
   }
 
   async function handleVerifyOTP() {
-    if (otp.length !== 5) {
-      setStatus({
-        type: "error",
-        message: "Please enter a valid 5-digit code",
-      });
+    if (otp.length !== 5 || isVerifying) {
       return;
     }
 
-    setIsSubmitting(true);
+    setIsVerifying(true);
     setStatus({ type: null, message: "" });
 
     const verifyResult = await verifyOTP(formData.email, otp);
@@ -108,9 +147,11 @@ export default function ContactForm() {
         type: "error",
         message: verifyResult.error || "Invalid verification code",
       });
+      // Clear OTP on error so user can try again
+      setOtp("");
     }
 
-    setIsSubmitting(false);
+    setIsVerifying(false);
   }
 
   async function handleSubmit(e: React.FormEvent) {
@@ -214,8 +255,16 @@ export default function ContactForm() {
                     : "bg-blue-500 hover:bg-blue-600 text-white"
                 } disabled:opacity-50 disabled:cursor-not-allowed`}
               >
-                <Shield className="w-4 h-4" />
-                {emailVerified ? "Verified" : "Verify"}
+                {isSubmitting ? (
+                  <Loader2 className="w-4 h-4 animate-spin" />
+                ) : (
+                  <Shield className="w-4 h-4" />
+                )}
+                {emailVerified
+                  ? "Verified"
+                  : isSubmitting
+                    ? "Sending..."
+                    : "Verify"}
               </button>
             </div>
           </div>
@@ -228,49 +277,59 @@ export default function ContactForm() {
                 <h4 className="font-medium">Email Verification</h4>
               </div>
 
-              <p className="text-sm text-white/60">
-                Enter the 5-digit code sent to your email
-              </p>
+              <div className="space-y-1">
+                <p className="text-sm text-white/60">
+                  Enter the 5-digit code sent to your email
+                </p>
+                <p className="text-xs text-white/40">
+                  Code will auto-verify when complete
+                </p>
+              </div>
 
               <div className="flex justify-center">
                 <InputOTP
                   maxLength={5}
                   value={otp}
                   onChange={(value: string) => setOtp(value)}
+                  disabled={isVerifying}
                 >
                   <InputOTPGroup>
                     {[0, 1, 2, 3, 4].map((index) => (
                       <InputOTPSlot
                         key={index}
                         index={index}
-                        className="w-12 h-12 text-lg font-semibold bg-white/5 border-white/20 text-white"
+                        className={`w-12 h-12 text-lg font-semibold bg-white/5 border-white/20 text-white transition-all ${
+                          isVerifying ? "opacity-50" : ""
+                        } ${
+                          otp.length > index
+                            ? "border-blue-400 bg-blue-400/10"
+                            : ""
+                        }`}
                       />
                     ))}
                   </InputOTPGroup>
                 </InputOTP>
               </div>
 
-              <div className="flex items-center justify-between">
+              {/* Auto-verify indicator */}
+              {isVerifying && (
+                <div className="flex items-center justify-center gap-2 text-blue-400 text-sm">
+                  <Loader2 className="w-4 h-4 animate-spin" />
+                  <span>Verifying code...</span>
+                </div>
+              )}
+
+              {/* Resend option */}
+              <div className="text-center">
                 <button
                   type="button"
                   onClick={handleSendOTP}
-                  disabled={isSubmitting}
-                  className="text-sm text-blue-400 hover:text-blue-300 transition-colors"
+                  disabled={isSubmitting || isVerifying}
+                  className="text-sm text-blue-400 hover:text-blue-300 transition-colors disabled:opacity-50"
                 >
                   Didn&apos;t receive the code?{" "}
                   <span className="font-semibold">Resend Code</span>
                 </button>
-
-                {otp.length === 5 && (
-                  <button
-                    type="button"
-                    onClick={handleVerifyOTP}
-                    disabled={isSubmitting}
-                    className="px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white text-sm font-medium rounded-lg transition-colors"
-                  >
-                    Verify Code
-                  </button>
-                )}
               </div>
             </div>
           )}
