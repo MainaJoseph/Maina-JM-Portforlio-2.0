@@ -7,7 +7,7 @@ import { TracingBeam } from "./ui/tracing-beam";
 
 const Hero = () => {
   return (
-    <div className="relative min-h-screen overflow-hidden">
+    <div id="home" className="relative min-h-screen overflow-hidden">
       {/* Enhanced Background with Multiple Layers */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-purple-950/20 to-slate-900">
         {/* Animated Gradient Orbs */}

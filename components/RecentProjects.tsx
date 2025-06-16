@@ -10,7 +10,7 @@ import { HoverBorderGradient } from "./ui/HoverBorder";
 
 const RecentProjects = () => {
   return (
-    <div className="py-5">
+    <div id="projects" className="py-5">
       <LampContainer>
         <h1 className="heading">
           A small selection of{" "}
