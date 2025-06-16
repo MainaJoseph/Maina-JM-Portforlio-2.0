@@ -1,54 +1,77 @@
-import { FaLocationArrow } from "react-icons/fa6";
-
 import { socialMedia } from "@/data";
-import MagicButton from "./MagicButton";
 import { Highlight } from "./ui/hero-highlight";
+import ContactForm from "./contact-form";
 
 const Footer = () => {
   return (
-    <footer className="w-full pt-20 pb-10" id="contact">
-      {/* background grid */}
-      <div className="w-full absolute left-0 -bottom-72 min-h-96">
-        <img
-          src="/footer-grid.svg"
-          alt="grid"
-          className="w-full h-full opacity-50 "
-        />
+    <footer
+      className="relative w-full pt-20 pb-10 overflow-hidden"
+      id="contact"
+      style={{ borderRadius: "10px" }}
+    >
+      {/* Enhanced background with dark blue gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-t from-[#050b18] via-[#0a1428] to-[#0f1b38]/80" />
+
+      {/* Animated background grid */}
+      <div className="absolute left-0 -bottom-72 w-full min-h-96 opacity-30">
+        <img src="/footer-grid.svg" alt="grid" className="w-full h-full" />
       </div>
 
-      <div className="flex flex-col items-center">
-        <h1 className="heading lg:max-w-[45vw]">
-          Ready to Elevate <span className="text-purple">your</span> Digital
-          Game to New Heights?
-        </h1>
-        <p className="text-white-200 md:mt-10 my-5 text-center">
-          Reach out to me today and let&apos;s{" "}
-          <Highlight className="text-black dark:text-white">
-            discuss how I can help you achieve your goals.
-          </Highlight>
-        </p>
-        <a href="mailto:mainajm254@gmail.com">
-          <MagicButton
-            title="Let's get in touch"
-            icon={<FaLocationArrow />}
-            position="right"
-          />
-        </a>
-      </div>
-      <div className="flex mt-16 md:flex-row flex-col justify-between items-center">
-        <p className="md:text-base text-sm md:font-normal font-light">
-          &copy; {new Date().getFullYear()} Joseph Maina
-        </p>
+      {/* Floating orbs for visual appeal */}
+      <div className="absolute top-20 left-1/4 w-32 h-32 bg-blue-500/10 rounded-full blur-3xl animate-pulse" />
+      <div className="absolute top-40 right-1/4 w-24 h-24 bg-purple-500/10 rounded-full blur-2xl animate-pulse delay-1000" />
 
-        <div className="flex items-center md:gap-3 gap-6">
-          {socialMedia.map((info) => (
-            <div
-              key={info.id}
-              className="w-10 h-10 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300"
-            >
-              <img src={info.img} alt="icons" width={20} height={20} />
+      <div className="relative z-10 flex flex-col items-center px-4 md:px-8">
+        {/* Header Section */}
+        <div className="text-center mb-16 max-w-4xl">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-purple-100 bg-clip-text text-transparent leading-tight">
+            Ready to Elevate{" "}
+            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+              Your
+            </span>{" "}
+            Digital Presence?
+          </h1>
+          <p className="text-lg md:text-xl text-white/70 leading-relaxed">
+            Let&apos;s collaborate and{" "}
+            <Highlight className="text-white font-medium">
+              bring your vision to life
+            </Highlight>
+            . I&apos;m here to help you achieve extraordinary results.
+          </p>
+        </div>
+
+        {/* Contact Form */}
+        <div className="w-full mb-20">
+          <ContactForm />
+        </div>
+
+        {/* Footer Bottom */}
+        <div className="w-full max-w-6xl">
+          <div className="h-px bg-gradient-to-r from-transparent via-white/20 to-transparent mb-8" />
+
+          <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+            <p className="text-white/60 text-sm md:text-base">
+              &copy; {new Date().getFullYear()} Joseph Maina. Crafted with
+              passion.
+            </p>
+
+            <div className="flex items-center gap-4">
+              {socialMedia.map((info) => (
+                <div
+                  key={info.id}
+                  className="group w-12 h-12 cursor-pointer flex justify-center items-center backdrop-blur-md bg-white/5 hover:bg-white/10 rounded-xl border border-white/10 hover:border-white/20 transition-all duration-300 hover:scale-110"
+                >
+                  <img
+                    src={info.img || "/placeholder.svg"}
+                    alt="social icon"
+                    width={20}
+                    height={20}
+                    className="group-hover:scale-110 transition-transform duration-300"
+                  />
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
         </div>
       </div>
     </footer>
